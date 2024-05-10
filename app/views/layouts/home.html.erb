@@ -1,0 +1,396 @@
+
+<% content_for :head do %>
+  <%= stylesheet_link_tag "style", "data-turbo-track": "reload" %>
+<% end %>
+
+<style>
+
+  
+:root {
+  --partenaire-width: 40vw;
+  --partenaire-height: 20vh;
+  /* --partenaire-elements: 12; */ /* defined with JavaScript */
+  --partenaire-elements-displayed: 5;
+  --partenaire-element-width: calc(var(--partenaire-width) / var(--partenaireelements-displayed));
+  --partenaire-animation-duration: calc(var(--partenaire-elements) * 3s);
+}
+
+.partenaire {
+  width: var(--partenaire-width);
+  height: var(--partenaire-height);
+  background-color: #111;
+  color: #eee;
+  overflow: hidden;
+  position: relative;
+}
+.partenaire:before, .partenaire:after {
+  position: absolute;
+  top: 0;
+  width: 10rem;
+  height: 100%;
+  content: "";
+  z-index: 1;
+}
+.partenaire:before {
+  left: 0;
+  background: linear-gradient(to right, #111 0%, transparent 100%);
+}
+.partenaire:after {
+  right: 0;
+  background: linear-gradient(to left, #111 0%, transparent 100%);
+}
+.partenaire-content {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  animation: scrolling var(--marquee-animation-duration) linear infinite;
+}
+/* .marquee-content:hover {
+  animation-play-state: paused;
+} */
+@keyframes scrolling {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(calc(-1 * var(--partenaire-element-width) * var(--partenaire-elements))); }
+}
+.partenaire-content li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+  flex-shrink: 0;
+  width: var(--partenaire-element-width);
+  max-height: 100%;
+  font-size: calc(var(--partenaire-height)*3/4); /* 5rem; */
+  white-space: nowrap;
+}
+
+.partenaire-content li img {
+  width: 100%;
+  /* height: 100%; */
+  border: 2px solid #eee;
+}
+
+@media (max-width: 600px) {
+  html { font-size: 12px; }
+  :root {
+    --marquee-width: 100vw;
+    --marquee-height: 16vh;
+    --marquee-elements-displayed: 3;
+  }
+  .partenaire:before, .partenaire:after { width: 5rem; }
+}
+</style>
+<div class="d-flex justify-content-center align-items-center">
+  <div class= "right-element">
+    <div class="formation-header">
+      <h1 style=" font-size: 32px;font-weight: bold;"><strong>Formation 4.0</strong></h1>
+      <h2>Video Tool</h2>
+      <p style="color=gray;">
+        avec Video Tool des formations à</br>
+        filmer pour accroitre la conscience</br>
+        des risques, atteindre l'excellence</br>
+        opérationnelle et construire une</br>
+        identité forte.
+      </p>
+    </div>
+  </div>
+  <!--
+  <div style="width:25%;"class ="left-element">
+    <%= image_tag '2-1.jpg'%>
+  </div>-->
+</div>
+
+ 
+
+<div class="d-flex justify-content-center align-items-center">
+  <h2 style ="font-size: 16px;"><strong>Acquérir des connaissances concrètes</br> en situation réelle</strong></h2>
+</div>
+
+<div class= "align">
+<div class="d-flex justify-content-center align-items-center">
+  <div class="video-player">
+    <video controls class="video">
+      <source src="videos/Director-how-it-works-fond-blanc-V3-1.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+<div class="d-flex justify-content-center align-items-center">
+  <h2><strong>
+    Une approche image pour des formations<span style="color: blue; font-size=10px;"> accessibles à tout public </span>
+  </strong></h2>
+</div>
+
+<div class="spacer" style="height: 50px;"></div> 
+<!-- Je dois revoir cette partie pour ajuster  les images -->
+<div class="image-mon">
+  <%= image_tag 'mon.png', alt: 'Descriptive alt text', class: 'background-image' %>
+  <div class="overlay-text">
+    AUTONOMIE • EXPERIMENTATION • IMPLICATION 
+  </div> 
+  </div>
+</div>
+
+<div class="content-wrapper">
+  <ul class="list">
+    <li>Expérimenter les instructions</li>
+    <li>Autonomiser pour apprendre</li>
+    <li>Impliquer par l'action</li>
+    <li>Agir sur les comportements</li>
+    <li>Une culture de la sécurité vivante</li>
+    <li>Respecter les spécificités de vos sites</li>
+  </ul>
+  <div class="learn-more">
+    <%= link_to 'En savoir plus →',firstensp_path, class: 'learn-more-link-white' %>
+  </div>
+</div>
+
+<div class="d-flex justify-content-center align-items-center">
+  <div class="custom-bottom">
+    COMMENT ÇA MARCHE?
+  </div>
+</div>
+ <h2 style="color: gray;">La rencontre de la technologie et du contenu d'apprentissage</h2>
+
+
+<div class="d-flex justify-content-center align-items-center">
+  <div class="card">
+    <div class="card-header">
+      <!--<span class="icon">CD201F</span> i will find the way to put the icon after  -->
+      <%= image_tag("youtube.png", alt: "Button 1", class: "youtube-image") %>
+        <span><h2 style="color: pink; font-weight: bold;">Gestion de vos formations :</h2></span>
+
+    </div>
+    <ul class="card-list-rose">
+      <li>Catalogue des formations disponibles pour votre société</li>
+      <li>Réunir une équipe de tournage, et nommer un réalisateur</li>
+      <li>Visualiser les avancées du projet grâce à un code couleur intuitif</li>
+      <li>Diffusez les vidéos de vos équipes dès réception du montage</li>
+      <li>Envoi de rappels de consigne</li>
+      <li>Suivi et données d'utilisation</li>
+    </ul>
+   
+    <div class="d-flex justify-content-start align-items-center">
+      <div class="learn-more">
+        <%= link_to 'En savoir plus →',pinkensp_path, class: 'learn-more-link-pink' %>
+      </div>
+  </div>
+    <!--<span class="icon"><i class="fab fa-youtube"></i></span> -->
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <span class="icon">📹</span> <!-- Replace with your icon -->
+      <span><h2 style="color: blue; font-weight: bold;">Téléchargez vos formations prêtes à filmer :</h2></span>
+    </div>
+    <ul class="card-list-bleue">
+      <li>Recevez un email et téléchargez votre formation</li>
+      <li>Durée de la formation entre 15 et 30 minutes en moyenne</li>
+      <li>Une appli tout public : naviguez sur une interface simplifiée au maximum; tout le monde peut l'utiliser!</li>
+      <li>Interactivité : chaque séquence à filmer est une étape de la formation</li>
+    </ul>
+  <div class="d-flex justify-content-start align-items-center">
+    <div class="learn-more"><%= link_to 'En savoir plus →', pinkensp_path, class: 'learn-more-link-blue' %></div>
+  </div>
+  </div>
+</div>
+<div class="d-flex justify-content-center align-items-center">
+  <h2><strong>Des fonctionnalités faites pour vous</strong></h2>
+</div>
+<!-- les élements qui défile: site pour voir le code  https://www.smashingmagazine.com/2024/04/infinite-scrolling-logos-html-css/-->
+<figure class="marquee">
+  <img class="marquee__item" src="images.png" width="100" height="100" alt="Company 1">
+  <img class="marquee__item" src="logo-2.png" width="100" height="100" alt="Company 2">
+  <img class="marquee__item" src="logo-3.png" width="100" height="100" alt="Company 3">
+</figure>
+
+  
+
+<div class="d-flex justify-content-center align-items-center">
+  <div class="custom-btn">
+    COMMUNICATION ÉMOTIONNELLE
+  </div>
+</div>
+
+Pour combattre
+l’habitude et les risques 
+peu perceptibles
+<div class="content">
+  <div class="image-text-container">
+    <div class="text-content">
+      <h2><strong>Sentir et ressentir</strong></h2>
+      <h1><strong>
+        Pour combattre</br>
+        l’habitude et les risques</br>
+        peu perceptibles</strong></h1>
+      <p>
+        <ul>
+          <li>L’émotion est un vecteur de</li>
+          <li>communication</li>
+          <li>sans égal, pour ouvrir les yeux sur ce qu’on </li>
+          <li>ne voit plus. Le message s’adresse au</li>
+          <li>Cœur</li>
+          <li>de vos équipes et suscite une réaction, à</li>
+          <li>l’intensité souvent inattendue.</li>
+        </ul>      
+      </p>
+      <p>
+        <ul>
+          <li>Personnaliser une vidéo c’est jeter un pont </li>
+          <li>entre soi et l’histoire qui arrive au collègue.</li>
+          <li>Une histoire qui pourrait être la nôtre,</li>
+          <li>aujourd’hui dans notre usine ou sur notre</li>
+          <li>chantier.</li>
+        </ul>      
+      </p>
+      <div class="customization-options">
+        <h3>Séquences personnalisables :</h3>
+        <ul>
+          <li>usines, poste de travail,</li>
+          <li>portrait, équipes, bonnes</li>
+          <li>mesures à prendre</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="same">
+  <h1>"Et si c'était moi?"</h1>
+  <div class="learn-more"><%= link_to 'En savoir plus →',etsisetaitmoi_path, class: 'learn-more-link-blue' %></div>
+
+</div>
+
+<div class="d-flex justify-content-center align-items-center">
+  <div class="add-theme-button">
+    AJOUTER UN NOUVEAU THÈME : FACILE !
+  </div>
+</div>
+
+
+<div class="digital-approach">
+  <h2><strong>Une approche digitale cohérente</strong></h2>
+  <p>
+  Procédures, consignes, votre documentation est qualitative. Il suffit de la transposer en format numérique VideoTool !</br> 
+  Pour chaque étape de la formation nous créons un exemple vidéo qui servira de référence (que dois-je faire ?) et un </br>
+  transparent graphique pour guider la phase de réalisation.</p>
+</div>
+<div class="tech">
+  <%= image_tag("Adding-a-new-topic_poster-1-1536x743.png") %>
+</div>
+<div class="features-container">
+  <ul class="features-list">
+    <li>Un processus simple et coherent car il repose sur votre documentation</li>
+    <li> Une validation simplifiée car la formation Video Tool ... c'est votre formation en mode digital</li>
+    <li>Les séquences à customiser dépendent de vos besoins, tout le film, ou quelques séquences</li>
+  </ul>
+  <div class="d-flex justify-content-center align-items-center">
+    <div class="learn-more"><%= link_to 'En savoir plus →', 'https://discover-frareg.videotool.app/fn/empowen-improve-engage-fr', class: 'learn-more-link-blue' %></div>
+  </div>
+</div>
+
+<div class="Tool">
+  <div class="title">
+    <h2><strong>Video Tool est une réponse simple à la plupart de vos problématiques</strong></h2>
+  </div>
+
+  <!--<div id="topics-list" class="topics-list">-->
+  <div class="column left-column">
+    <ul>
+      <li>Sécurité</li>
+      <li>WCM</li>
+      <li>Qualité</li>
+      <li>Process & Maintenance</li>
+      <li>Ressources humaines</li>
+      <li>formation</li>
+      <li>Premiers secours</li>
+      
+    </ul>
+  </div>
+  <div class="column right-column">
+    <ul>
+      <li>Misc Trainings</li>
+      <li>Procédures</li>
+      <li>Modop</li>
+      <li>Consignes</li>
+      <li>Acceuil au poste</li>
+      <li>Acceuil sécurité</li>
+      <li>...</li>
+      
+    </ul>
+  </div>
+</div>
+  <div class="Tool-container">
+    <button onclick="splitTransition()">Demander un nouveau thème</button>
+  </div>
+</div>
+<!--Une nouvelle forme de carrousel-->
+<div class="partenaire">
+  <ul class="partenaire-content">
+    <li><%= image_tag 'saitgobain1.jpg', alt: 'Saint-Gobain' %></li>
+    <li><%= image_tag 'certennew1.jpg', alt: 'CertainTeed' %></li>
+    <li> <%= image_tag 'isovernew1.jpg', alt: 'Isover' %></li>
+    <li><%= image_tag 'webernew1.jpg', alt: 'Weber' %></li>
+    <li> <%= image_tag 'pamnew1.jpg', alt: 'PAM' %></li>
+  </ul>
+</div>
+
+
+ <!--Carrousel à revoir plus tard 
+<div class="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-slide">
+      <%= image_tag 'saitgobain1.jpg', alt: 'Saint-Gobain' %>
+    </div>
+    <div class="carousel-slide">
+      <%= image_tag 'certennew1.jpg', alt: 'CertainTeed' %>
+    </div>
+    <div class="carousel-slide">
+      <%= image_tag 'isovernew1.jpg', alt: 'Isover' %>
+    </div>
+    <div class="carousel-slide">
+      <%= image_tag 'webernew1.jpg', alt: 'Weber' %>
+    </div>
+    <div class="carousel-slide">
+      <%= image_tag 'pamnew1.jpg', alt: 'PAM' %>
+    </div>
+  </div>-->
+  <!-- Contrôles du carrousel 
+  <button class="prev" onclick="plusSlides(-1)">❮</button>
+  <button class="next" onclick="plusSlides(1)">❯</button>
+</div>-->
+
+
+
+<div class="video-temoignage">
+  <%= image_tag 'Image_témoignage.png'%>
+</div>
+
+
+
+
+<!--à utiliser plus tard
+<div class="widget-container">
+  <% # Example list of widgets %>
+  <% @widgets = [
+        { title: 'Nous montons vos vidéos', color: 'orange', icon: 'movie' },
+        { title: 'Mode hors ligne: toujours accessible ', color: 'blue', icon: 'sky' },
+        { title: 'Evaluer vos besoins', color: 'blue', icon: 'triange' },
+        { title: 'Paiement en éclair', color: 'red', icon: 'card' },
+        { title: 'Suivi et données', color: 'red', icon: 'computer' },
+        { title: 'Envoi de rappels de consigne faits:"maison"', color: 'pink', icon: 'brain' },
+        { title: 'Video tutorials gives you functional autonomy', color: 'blue', icon: 'play' },
+        { title: 'Utilisation multiplateforme', color: 'grey', icon: 'devices' },
+        { title: 'Configurabilité', color: 'white', icon: 'settings' },
+        { title: 'Accidents & tracking', color: 'black', icon: 'balance_scale' },
+        
+      ]
+  %>
+</div>-->
+
+
+
+
+
+
