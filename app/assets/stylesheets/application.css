@@ -13,3 +13,1006 @@
  *= require_tree .
  *= require_self
  */
+body {
+    margin: 0; 
+    font-family: Arial, sans-serif;
+    text-align: center;
+  
+  }
+  .image-container {
+    width: 200px;  
+    height: auto;
+    border: none;
+    float: left;
+ 
+  }
+  .container { 
+    text-align: center;
+    padding: 20px;
+  
+  }
+.image-overlay-container {
+  position: relative;
+  text-align: center;
+  color: white; /* Adjust the color as needed */
+}
+
+.background-image {
+  width: 100%; 
+  display: block; /* Remove any extra space below the image */
+}
+
+
+.formation-header {
+  text-align: left;
+}
+
+.formation-header h2 {
+  font-size: 32px;
+  font-weight: bold;
+  color: blue;
+}
+
+
+
+
+.formation-description {
+  margin-left: 20px; 
+}
+/*
+.page-container {
+  width: 100%; 
+  display: flex;
+  justify-content: center;
+  .video-thumbnail {
+  position: absolute;
+  top: 20px; 
+  left: 20px; 
+  width: 200px; 
+  height: auto;
+  
+.thumbnail-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+}*/
+
+
+
+.video-player {
+  position: relative;
+  max-width: 300px; 
+  margin: auto; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+.video {
+  display: block;
+  width: 100%;
+}
+.video-controls {
+  position: absolute;
+  bottom: 10px; 
+  width: 100%;
+  text-align: center;
+}
+.justify-content-center{
+  display: flex;
+}
+.align{
+  text-align: left;
+  align-content: flex-start;
+}
+.image-mon{
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.background-image {
+  width: 100%; 
+  display: block; 
+  height: auto;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 8%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap; /* Ensure the text stays on one line */
+  
+  border: 1px solid black; /* Set the border style and color */
+  background-color: white;
+  color: black;
+  font-size: 24px;
+  font-weight: bold; 
+  
+  /*
+  color: white; / Text color /
+  font-size: 24px; / Adjust the font size as needed /
+  font-weight: bold; / Optional: makes the text bold /
+  letter-spacing: 1px; / Optional: increases spacing between characters */
+
+}
+
+.content-wrapper {
+  background: #4e54c8;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1e1572, #1e1572);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #08033a, #222d68); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically */
+  justify-content: center; /* Center items vertically */
+  height: 64vh; /* Full height of the viewport */
+}
+
+.item {
+  text-align: center;
+  margin: 20px;
+}
+
+.computer img,
+.mobile img {
+  width: 100%; /* Adjust this as needed */
+  max-width: 300px; /* Adjust based on your layout needs */
+  border-radius: 10px; /* Optional, for rounded corners */
+}
+
+.play-icon .play-button img {
+  width: 50px; 
+}
+.close-button {
+  position: absolute;
+  top: 10px; 
+  right: 10px; 
+  font-size: 24px;
+  color: red; 
+  cursor: pointer;
+  z-index: 1010; 
+}
+.video-container {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000; /* Ensure it's above other content */
+  background-color: rgba(0, 0, 0, 0.8); /* Optional: adds a dark backdrop */
+}
+
+/* Text styling */
+.item p {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #333;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .content-container {
+    flex-direction: column;
+  }
+}
+
+.list {
+  list-style:inside disc;/* Position bullets inside the content flow */
+  padding-left: 0; /* Remove default padding */
+  margin: 0; /* Remove default margin */
+  color: white; /* Set text color to white */
+  font-family: 'Arial', sans-serif; /* Use your preferred font */
+}
+
+.list li {
+  margin-bottom: 10px; /* Space between list items */
+}
+.learn-more{
+  margin-top: 15px; /* Space from the last list item */
+}
+.learn-more-link-white {
+  color: #0055A4;
+  text-decoration: none;
+  font-weight: bold;
+  background-color:white ; /* Button color */
+  padding: 5px 10px;
+  border-radius: 5px; /*Rounded corners for the button*/
+  display:inline-block; 
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+.learn-more-link-pink {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #E91E63; /* Button color */
+  padding: 5px 10px;
+  border-radius: 5px; /*Rounded corners for the button*/
+  display:inline-block; 
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+.learn-more-link-blue{
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #0055A4; /* Button color */
+  padding: 5px 10px;
+  border-radius: 5px; /*Rounded corners for the button*/
+  display:inline-block; 
+  transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* app/assets/stylesheets/widgets.css */
+.widget-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* Allows horizontal scrolling */
+  gap: 10px; /* Spacing between services */
+  padding: 10px;
+
+}
+
+.service {
+  flex: 0 0 auto; /* Do not grow, do not shrink, base size is automatic */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 150px;
+  margin: 0 5px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.widget:hover {
+  transform: translateY(-5px);
+}
+
+.widget-title {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.widget-blue { background-color: #007bff; color: white; }
+.widget-grey { background-color: #6c757d; color: white; }
+.widget-white { background-color: #ffffff; color: black; }
+.widget-black { background-color: #343a40; color: white; }
+.widget-orange { background-color: #fd7e14; color: white; }
+
+
+.custom-bottom{
+  background: #654ea3;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  color: #fff;
+  border: 3px solid #eee;
+ 
+  border-radius: 5px;
+  width: 25%; 
+  height: 9%;
+  font-size: 1.5em; /* Larger text size */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+  margin: 30px;
+}
+
+.card {
+  flex: 0 0 calc(30% - 20px); /*1 Ne grandit pas, ne rétrécit pas, largeur définie */; /* Permet aux cartes de remplir l'espace disponible */
+  background-color:whitesmoke;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border-radius:2px;
+  border-color: white;
+  padding: 20px;
+  margin: 10px;
+  height: fit-content; /* Hauteur pour englober le contenu de la carte */
+  max-width: calc(30% - 10px); /*   Calcule la largeur max pour 2 cartes*/
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.card-header .icon {
+  font-size: 24px; /* Icon size */
+  margin-right: 10px;
+}
+
+.card-list-rose {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.card-list-bleue {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-list-rose li {
+  margin-bottom: 10px;
+  line-height: 1.6; /* Line height for better readability */
+  padding-left: 30px; /* Space for checkmark or icon */
+  position: relative;
+}
+.card-list-bleue li {
+  margin-bottom: 10px;
+  line-height: 1.6; /* Line height for better readability */
+  padding-left: 30px; /* Space for checkmark or icon */
+  position: relative;
+}
+
+.card-list-rose li:before {
+  content: '✓'; /* Your checkmark or bullet icon */
+  position: absolute;
+  left: 0;
+  color: #E91E63; 
+}
+.card-list-bleue li:before {
+  content: '✓'; /* Your checkmark or bullet icon */
+  position: absolute;
+  left: 0;
+  color: blue; 
+}
+
+
+.youtube-image {
+  width: 50px; /* ou la taille désirée */
+  height: auto;
+  transition: filter 0.3s; /* transition douce pour l'effet de survol */
+}
+
+.youtube-image:hover {
+  filter: grayscale(100%); /* convertit l'image en gris au survol */
+}
+/* le css pour la partie communication emmo.....*/
+.custom-btn {
+  background-color: darkred; /* Dark pink background */
+  color: white; /* White text */
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none; /* No border */
+  border-radius: 5px;
+  width: 100%; /* Full width */
+  max-width: 620px; 
+  font-size: 1.5em; /* Larger text size */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+}
+
+.custom-btn:hover {
+  background-color: darkred; 
+  color: whitesmoke; /* White text on hover */
+}
+
+.content {
+  display: flex;
+ 
+  text-align: left;
+  padding: 20px;
+  background: url('/assets/Emotional-Communication.png') no-repeat right center;
+  background-size: cover;
+  color: gray; /* Blanc pour le texte */
+  /* Centrage vertical et horizontal du contenu */
+  height: 100vh; /* Utiliser 100% de la hauteur de la fenêtre */
+  width: 60%; /* Utiliser 100% de la largeur disponible */
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.image-text-container {
+ 
+  width: 50px; /* The width of your image in pixels. */
+  height: 50px; /* The height of your image in pixels. */
+  display: inline-block; /* The inside needs to be a block to set it's sizeIf positioned, it could be block as well. */
+  background-image: url('/assets/Emotional-Communication-poster_sfumatura.png')
+  overflow: hidden;
+}
+
+.text-content {
+  padding-left: 20px; /*pour ne pas toucher l'image*/
+  font-size: 12%;
+}
+
+
+.text-content h1 {
+  font-size:12px;
+  color: black; 
+}
+
+.text-content h2 {
+  font-size: 10px;
+  color: #E91E63; 
+}
+
+.text-content p {
+  font-size:9px;
+  margin-bottom: 0.85rem;
+  line-height: 0.5; /*Espacement entre les lignes */
+  margin-bottom: 1rem;
+}
+
+.customization-options {
+  border-top: 3px solid grey; /*Ligne de séparation*/
+  padding-top: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.customization-options h3 {
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .image-text-container {
+    flex-direction: column;
+    background: none; /* enlevez l'image de fond sur les petits écrans si nécessaire */
+  }
+
+  .text-content {
+    width: 90%; /* Le texte prend toute la largeur sur les petits écrans */
+    padding-right: 0;
+  }
+}
+
+
+.btn-primary{
+  background-color: white; /* White background */
+  color: rgb(192, 24, 94); 
+  padding: 10px 20px;
+  font-weight: bold;
+  border: #333;
+  border-radius: 5px;
+  border: none; /* Pas de couleur pour la bordure */
+  width: 200%; /* Full width */
+  max-width: 620px; 
+  font-size: 1.5em; /* Larger text size */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+ /*display: block;  */
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: transparent; 
+  color: rgb(192, 24, 94); 
+}
+
+
+.image-footer{
+    width: 100px;       
+    height: 100px;      
+    overflow: hidden;  
+    display: flex;      
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-footer img {
+    width: 100%;        /* Étend l'image à la largeur du conteneur */
+    height: 100%;       /* Étend l'image à la hauteur du conteneur */
+    object-fit: cover;  /* Garde les proportions tout en remplissant l'espace */
+  }
+/*
+.footer img {
+    height: 50px; / Hauteur de l'image /
+    width: auto; / Largeur automatique basée sur la hauteur /
+    margin-bottom: 10px; / Marge en dessous de l'image si le texte est en dessous /
+}
+
+.footer-text {
+    margin-top: 10px; / Marge au-dessus du texte /
+    font-size: 16px; / Taille de la police du texte */
+
+.btn-primary{
+  background-color: white; /* White background */
+  color: rgb(192, 24, 94); 
+  padding: 10px 20px;
+  font-weight: bold;
+  border: #333;
+  border-radius: 5px;
+  border: none; /* Pas de couleur pour la bordure */
+  width: 200%; /* Full width */
+  max-width: 620px; 
+  font-size: 1.5em; /* Larger text size */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); 
+ /*display: block;  */
+  text-align: center;
+}
+
+.btn-primary:hover {
+  background-color: transparent; 
+  color: rgb(192, 24, 94); 
+}
+
+
+
+.same {
+  text-align: center;
+  padding: 20px;
+}
+.same h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+.add-theme-button-container {
+  text-align: center;
+  padding: 20px;
+}
+
+.add-theme-button {
+  background-color: #FFA500; /* Orange color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  
+}
+
+.digital-approach {
+  padding: 20px;
+  text-align: center;
+}
+
+.digital-approach h2 {
+  font-size: 1.5em;
+  color: #000;
+  margin-bottom: 1em;
+}
+
+.digital-approach p {
+  font-size: 1em;
+  color: #333;
+}
+.features-container {
+  padding: 20px;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+}
+
+.features-list li {
+  color: #000;
+  margin-bottom: 10px;
+  position: relative;
+}
+.features-list li::before {
+  content: '✔'; /* Custom bullet */
+  color: #0056b3; /* Blue color for the bullet */
+  /*position: absolute;  Position the bullet outside the text */
+  left: -1.5em; 
+}
+.summary {
+  padding: 20px;
+  background-color: #e8e8e8; /* Light grey, adjust as needed */
+  text-align: center;
+}
+
+.summary h2 {
+  color: #000;
+  font-size: 1.25em;
+  margin: 0;
+}
+
+
+.Tool{
+  display: flex;
+  justify-content: space-between;
+  /*
+  text-align: center;
+  padding: 50px;
+  font-family: Arial, sans-serif;*/
+}
+.title {
+   margin-bottom: 30px;
+}
+    
+.topics-list {
+      
+  display: flex;
+  justify-content: center;/*space-around;*/
+  margin-bottom: 30px;
+  opacity: 1;
+  transition: transform 0.5s, opacity 0.5s;
+}
+/*
+.topics-list.hidden {
+  opacity: 0;
+  transform: translateX(-50%);
+} */
+.column {
+  width: 50%;
+  transition: all 0.5s ease; /* This applies a transition to all properties */
+}
+
+.left-column {
+  /* Initial state styles if needed */
+}
+
+.right-column {
+  /* Initial state styles if needed */
+}
+
+/* Example of a hover effect */
+.container:hover .left-column,
+.container:hover .right-column {
+  transform: scale(1.05); /* Simple scale animation on hover */
+}
+
+.h2, p {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Styles du carrousel */
+/* Exemple de styles CSS pour le carrousel */
+.carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: none;
+  text-align: center;
+}
+
+.carousel-slide img {
+  width: 100%;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+
+
+.video-temoignage img {
+  width: 1400px; /* Assurez-vous d'ajouter 'px' pour les pixels */
+  height: 200px; /* Ajuste automatiquement la hauteur proportionnellement */
+}
+
+/*La partie de css pour la fonctionnalité partagé*/
+
+.share-menu {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 300px;
+  right: 20px;
+  top: 50px;
+}
+.share-menu a {
+  display: block;
+  padding: 8px;
+  margin: 5px 0;
+  background: #f0f0f0;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.share-menu a:hover {
+  background-color: #e0e0e0;
+}
+/*css partie LastEnSP à copier plus tard*/
+.d-flex {
+  display: flex;
+  align-items: center; /* Centre verticalement les éléments */
+  justify-content: center; /* Centre horizontalement les éléments */
+  gap: 50px; /* Ajoute de l'espace entre l'image et le texte */
+  padding-bottom: 20px;
+}
+
+.left-element {
+  display: block; /* Supprime l'espace en bas */
+  width: 10%; /* Réduit la largeur à 25% pour diminuer la taille de l'image */
+  height: auto; 
+}
+
+.right-element {
+  max-width: 600px; /* Limite la largeur du texte pour éviter qu'il ne soit trop étendu */
+  text-align: justify; /* Justifie le texte */
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1em; /* Ajoute un peu d'espace après le paragraphe */
+  font-size: 12px;
+  color: #6c757d;
+}
+.awards-container {
+  display: flex;
+  align-items: center; /* Centre verticalement les éléments */
+  justify-content: center; /* Centre horizontalement les éléments */
+  background-color: #333F50; /* Couleur de fond */
+  color: #fff; /* Couleur du texte */
+  width: 100%; /* Largeur complète */
+  padding: 20px; /* Padding uniforme pour l'esthétique */
+  margin-bottom: 20px;
+}
+
+
+.texte-container {
+  text-align: center; /* Centre le texte */
+  font-size: 20px; /* Taille de la police */
+  padding: 0 20px; /* Padding pour donner de l'espace autour du texte */
+}
+
+.awards {
+  display: flex;
+  justify-content: center; /* Centre les images horizontalement */
+  padding: 0 20px; /* Padding pour donner de l'espace autour des images */
+}
+
+.awards img {
+  width: 100px; /* Largeur spécifiée pour les images */
+  height: 120px; /* Hauteur spécifiée pour les images */
+  margin: 0 16px; /* Marge entre les images */
+}
+
+
+.team-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+
+.team-member {
+  background-color: white;
+  margin: 10px 10px 10px 10px;
+  padding: 30px 30px 30px 30px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content horizontally */
+  align-content: flex-start;
+}
+
+.team-member img {
+  width: 150px; /* Fixed width for all images */
+  height: 150px; /* Fixed height to maintain aspect ratio */
+  border-radius: 50%;
+  margin-bottom: 20px;
+  object-fit: cover; /* Ensure images cover the frame without distortion */
+}
+
+h3 {
+  margin: 10px 0;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+  text-align: justify; /* Justifie le texte */
+  font-size: 12px;
+}
+.footer {
+  background-color: #ccc;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 -1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content h2 {
+  color: #333;
+}
+
+footer button {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: rgb(206, 27, 66);
+  background-color: white; 
+  border: 2px solid #ce1b42; /* Spécifiez la couleur et l'épaisseur de la bordure */
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+
+
+/* Partie du firstensp*/
+.text-box {
+  width: 280px; /* Largeur du rectangle */
+  height: 150px;
+  display: flex; /* Utilise flexbox pour aligner image et texte */
+  align-items: center; /* Centre les éléments verticalement */
+  padding: 10px; /* Espace intérieur autour du contenu */
+  border-radius: 10px; /* Rayon des coins arrondis */
+  background-image: url('/assets/frame_843-copie-1024x576.jpg'); /* Définit l'image de fond */
+  background-size: cover; /* Assure que l'image de fond couvre tout le conteneur */
+  background-position: center; /* Centre l'image de fond */
+  overflow: hidden; /* Empêche le débordement du contenu hors du conteneur */
+}
+.text-second-box {
+  width: 280px; /* Largeur du rectangle */
+  height: 150px;
+  display: flex; /* Utilise flexbox pour aligner image et texte */
+  align-items: center; /* Centre les éléments verticalement */
+  padding: 10px; /* Espace intérieur autour du contenu */
+  border-radius: 10px; /* Rayon des coins arrondis */
+  background-image: url('/assets/1parte1-1536x860.jpg'); /* Définit l'image de fond */
+  background-size: cover; /* Assure que l'image de fond couvre tout le conteneur */
+  background-position: center; /* Centre l'image de fond */
+  overflow: hidden; /* Empêche le débordement du contenu hors du conteneur */
+}
+/*Penser à trouver une solution pour eviter la redondance de code*/
+.picture-box {
+  position: relative;
+  width: 600px; /* Largeur du rectangle */
+  height: 350px;
+  display: flex; /* Utilise flexbox pour aligner image et texte */
+  align-items: center; /* Centre les éléments verticalement */
+  padding: 10px; /* Espace intérieur autour du contenu */
+  border-radius: 10px; /* Rayon des coins arrondis */
+  background-image: url('/assets/1parte2-scaled.jpg'); /* Définit l'image de fond */
+  background-size: cover; /* Assure que l'image de fond couvre tout le conteneur */
+  background-position: center; /* Centre l'image de fond */
+  overflow: hidden; /* Empêche le débordement du contenu hors du conteneur */
+}
+.picture-two-box {
+  position: relative;
+  width: 600px; /* Largeur du rectangle */
+  height: 350px;
+  display: flex; /* Utilise flexbox pour aligner image et texte */
+  align-items: center; /* Centre les éléments verticalement */
+  padding: 10px; /* Espace intérieur autour du contenu */
+  border-radius: 10px; /* Rayon des coins arrondis */
+  background-image: url('/assets/frame_952-copie.jpg'); /* Définit l'image de fond */
+  background-size: cover; /* Assure que l'image de fond couvre tout le conteneur */
+  background-position: center; /* Centre l'image de fond */
+  overflow: hidden; /* Empêche le débordement du contenu hors du conteneur */
+}
+.picture-three-box {
+  position: relative;
+  width: 600px; /* Largeur du rectangle */
+  height: 350px;
+  display: flex; /* Utilise flexbox pour aligner image et texte */
+  align-items: center; /* Centre les éléments verticalement */
+  padding: 10px; /* Espace intérieur autour du contenu */
+  border-radius: 10px; /* Rayon des coins arrondis */
+  background-image: url('/assets/frame_2726-copie.jpg'); /* Définit l'image de fond */
+  background-size: cover; /* Assure que l'image de fond couvre tout le conteneur */
+  background-position: center; /* Centre l'image de fond */
+  overflow: hidden; /* Empêche le débordement du contenu hors du conteneur */
+}
+.picture-four-box {
+  position: relative;
+  width: 600px; /* Largeur du rectangle */
+  height: 350px;
+  display: flex; /* Utilise flexbox pour aligner image et texte */
+  align-items: center; /* Centre les éléments verticalement */
+  padding: 10px; /* Espace intérieur autour du contenu */
+  border-radius: 10px; /* Rayon des coins arrondis */
+  background-image: url('/assets/frame_3445-copie.jpg'); /* Définit l'image de fond */
+  background-size: cover; /* Assure que l'image de fond couvre tout le conteneur */
+  background-position: center; /* Centre l'image de fond */
+  overflow: hidden; /* Empêche le débordement du contenu hors du conteneur */
+}
+
+.middle-text{
+  color: white;
+  position: absolute; /* Positionnement absolu pour le texte */
+  right: 0; /* Aligné à droite */
+  top: 0; /* Aligné en haut */
+  bottom: 0; /* Étendu vers le bas pour aligner verticalement */
+  width: 40%; /* Largeur du texte à 40% du conteneur */
+  padding: 10px; /* Espacement intérieur */
+  text-align: justify; /* Justification du texte */
+  display: flex;
+  align-items: center; /* Centre le texte verticalement */
+  font-size: 18px;
+}
+/*à revoir plus tard*/
+.je-ne-sais-pas-encore{ 
+  position: absolute; /* Positionnement absolu pour le texte */
+  left: 50%; /* Centrage horizontal (partie de gauche à 50% du conteneur) */
+  top: 0; /* Aligné en haut pour être au sommet de l'image */
+  transform: translateX(-50%); /* Décalage de 50% vers la gauche pour centrer précisément */
+  width: 50%; /* Largeur du texte à 40% du conteneur */
+  color: white;
+  font-size: 18px;
+}
+
+
+
+      
+/* On fait en sorte que chaque élément contienne sa marge interne avec box-sizing et on retire les traits qui sont par défaut sur les liens */
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+/* On modernise notre balise de navigation avec une petite ombre. On mets tous les éléments du menu les uns bien à côté des autres avec flexbox (display: flex) */
+nav {
+  background-color: #fff;
+  padding: 0 20px;
+  border-radius: 40px;
+  box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+  display: flex;
+  overflow: hidden;
+  overflow-x: auto;
+  position: relative;
+}
+
+/* On stylise chaque élément */
+.nav-item {
+  color: #83818c;
+  font-family: arial, sans-serif;
+  padding: 20px;
+  margin: 0 6px;
+  position: relative;
+}
+
+/* Ici on met juste un petit élément avant chaque élément pour le rendre plus beau visuellement */
+.nav-item:before {
+  content: "";
+  position: absolute;
+  bottom: -6px;
+  background-color: #dfe2ea;
+  height: 5px;
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+  left: 0;
+  transition: .3s;
+}
+
+/* Avec les dernières nouveautés de CSS, on peut changer les propriétés des éléments selon des conditions avec not */
+.nav-item:not(.is-active):hover:before {
+  bottom: 0;
+}
+.nav-item:not(.is-active):hover {
+  color: #333;
+}
+
+/* Stylisons notre indicateur */
+.nav-indicator {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 5px;
+  transition: .4s;
+  border-radius: 8px 8px 0 0;
+}
+
+
+
+.signup-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.signup-button:hover {
+  background-color: #0056b3;
+}
