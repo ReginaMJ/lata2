@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-<<<<<<< HEAD
-git   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-=======
 
   root to: "pages#home" # Utilisation de la route racine pour la page d'accueil de pages#home
 
@@ -37,5 +34,4 @@ git   # For details on the DSL available within this file, see https://guides.ru
 
   # Learn more about this file at: https://guides.rubyonrails.org/routing.html
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
->>>>>>> a35c7bcc148b3deaaa73e309edae2186d783fcf3
 end
