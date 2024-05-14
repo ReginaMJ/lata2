@@ -11,9 +11,91 @@
   <meta name="description" content="A production ready example Rails app that's using Docker and Docker Compose.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+  <%= javascript_include_tag "home", "data-turbo-track": "reload", defer: true %>
+  
+  <%= yield :head %>
+
+  <%# Generated with: https://realfavicongenerator.net/ %>
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo-frareg-videotool-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="logo-frareg-videotool-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#61b9d2">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWecG8VcP/ODgHcT0lIBs5x5rb5eRuKBJfWwz5Blu2vJpZhLmdJ4Jh0X3F2J" crossorigin="anonymous">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+  
+  <% if controller_name == 'pages' && action_name == 'home' %>
+<!-- Revoir ce code il est des trucs ambigues*-->
+<header style="background-color: white; padding: 10px 0;">
+    <div class="navbar" style="display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0 20px;">
+      
+      <!-- Section gauche avec logo et texte collés -->
+      <div class="left-section" style="display: flex; align-items: center;">
+        <%= image_tag("logo-frareg-videotool.png", alt: "FRAREG logo", style: "width: 45px; height: auto; margin-right: 5px;") %>
+
+        <a href="#" style="color: blue; font-size: 20px; text-decoration: none;"><strong>Filmer pour se former</strong></a>
+      </div>
+
+      <!-- Section centrale: Menu de navigation -->
+      <div class="center-menu" style="flex-grow: 1; display: flex; justify-content: center; align-items: center;">
+        <a href="#" style="margin: 0 20px; text-decoration: none; color: black; font-size: 16px;">Home</a>
+        <a href="#" style="margin: 0 20px; text-decoration: none; color: black; font-size: 16px;">About</a>
+        <a href="#" style="margin: 0 20px; text-decoration: none; color: black; font-size: 16px;">Services</a>
+        <a href="#" style="margin: 0 20px; text-decoration: none; color: black; font-size: 16px;">Portfolio</a>
+        <a href="#" style="margin: 0 20px; text-decoration: none; color: black; font-size: 16px;">Contact</a>
+        <a href="#" style="margin: 0 20px; text-decoration: none; color: black; font-size: 16px;">Blog</a>
+      </div>
+    
+      <!-- Section droite avec les icônes -->
+      <div class="right-section" style="display: flex; align-items: center; gap: 20px;">
+        <button style="background: none; border: none;">
+          <%= image_tag("share-button1.png", alt: "Share", style: "width: 20px; height: 20px;") %>
+        </button>
+        <%= link_to image_tag("Sans titre.png", alt: "Button 2", style: "width: 10px; height: 10px;"), "#" %>
+        <%= link_to image_tag("Sans titre2.png", alt: "Button 3", style: "width: 10px; height: 10px;"), "#" %>
+
+        <!-- Ajoutez d'autres icônes ou éléments ici si nécessaire -->
+      </div>
+      
+    </div>
+</header>
+
+  <% end %>
+  <main>
+    <%= yield %>
+  </main>
+  <% if controller_name == 'pages' && action_name == 'home' %>
+    <footer class="footer">
+      <div class="centered-button">
+          <a class="signup-button"
+        href="mailto:b.bolzoni@frareg.com?cc=contact@avhfilms.com&body=Groupe%20ou%20entreprise%3A%C3%89tablissement%3AAdresse%3ANom%20de%20famille%3APr%C3%A9nom%3AEmail%20(courriel%20professionnel%20uniquement)%3AFonction%3AT%C3%A9l%C3%A9phone%3A">
+        INSCRIVEZ VOTRE ETABLISSEMENT →
+          </a>
+      </div>
+      <div class="d-flex justify-content-center align-items-center">
+        <p class="slogan">TRAINING 4.0 TECHNOLOGY THAT SERVES PEOPLE</p>
+      </div>
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="logos">
+          <%= image_tag("logo-frareg-basso-rev2-1.png") %>
+        </div>
+      </div>
+    </footer>
+
+  <% end %>
+  </body>
+</html>
+ude_tag "application", "data-turbo-track": "reload", defer: true %>
   <%= javascript_include_tag "home", "data-turbo-track": "reload", defer: true %>
   
   <%= yield :head %>
